@@ -2,20 +2,20 @@ module.exports = (app) => {
     const orderitem = require('../controllers/pos.orderitems.controller.js');
 
     // Create a new orderitem
-    app.post('/orderitem', orderitem.create);
+    app.post('/orderitems', orderitem.create);
 
     // Retrieve all orderitems
-    app.get('/orderitem', orderitem.findAll);
+    app.get('/orderitems', orderitem.findAll);
 
     // Retrieve a orderitem user with orderitemId
-    app.get('/orderitem/:orderitemId', orderitem.findOne);
+    app.get('/orderitems/:orderitemId', orderitem.findOne);
 
     // Update a orderitem with orderitemId
-    app.put('/orderitem/:orderitemId', orderitem.update);
+    app.put('/orderitems/:orderitemId', orderitem.update);
 
     // Delete a user with orderitem
-    app.delete('/orderitem/:orderitemId', orderitem.delete);
+    app.delete('/orderitems/:orderitemId', orderitem.delete);
 
     // Delete all orderitems
-    app.delete('/orderitem', orderitem.deleteAll);
+    app.delete('/orderitems', orderitem.deleteAll);
 }

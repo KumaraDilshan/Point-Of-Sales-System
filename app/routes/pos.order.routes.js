@@ -2,20 +2,20 @@ module.exports = (app) => {
     const order = require('../controllers/pos.order.controller.js');
 
     // Create a new order
-    app.post('/order', order.create);
+    app.post('/orders', order.create);
 
     // Retrieve all orders
-    app.get('/order', order.findAll);
+    app.get('/orders', order.findAll);
 
     // Retrieve a single order with orderId
-    app.get('/order/:orderId', order.findOne);
+    app.get('/orders/:orderId', order.findOne);
 
     // Update a order with orderId
-    app.put('/order/:orderId', order.update);
+    app.put('/orders/:orderId', order.update);
 
     // Delete a order with orderId
-    app.delete('/order/:orderId', order.delete);
+    app.delete('/orders/:orderId', order.delete);
 
     // Delete all orders
-    app.delete('/order', order.deleteAll);
+    app.delete('/orders', order.deleteAll);
 }
